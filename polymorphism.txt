@@ -1,0 +1,138 @@
+=========================================== method overridding =======================================================================
+package com.polymorphism;
+class Notification{
+	public void sendNotification() {
+		System.out.println("it a normal message notification");
+	}
+}
+class EmailNotification extends Notification{
+	public void sendNotification() {
+		System.out.println("it a email message notification");
+	}
+}
+
+public class WhatsappNofication extends Notification {
+	public void sendNotification() {
+		System.out.println("it a whatsapp message notification");
+	}
+	public static void main(String[] args) {
+		Notification nt=new Notification();
+		Notification nwt=new EmailNotification();
+		Notification nqt=new WhatsappNotification();
+		nt.sendNotification();
+		nwt.EmailNoti
+		
+		
+	}
+	
+
+}
+===============================================================================================================================
+package com.polymorphism;
+class OldTv{
+	public void sound() {
+		System.out.println("Sound is good");
+		
+	}
+	public void screen() {
+		System.out.println("lcd display");
+	}
+}
+
+public class Newtv extends OldTv {
+	@Override
+	public void screen() {
+		System.out.println("led display for newtv");
+	}
+	public static void main(String[] args) {
+		Newtv b=new Newtv();
+		b.sound();
+		b.screen();
+	}
+
+}
+=====================================================================================================
+package com.polymorphism;
+
+public class Areas {
+	public int area(int l,int b)
+	{
+		int c=l*b;
+		return c;
+	}
+	public double area(double side)
+	{
+		double b=side*side;
+		return b;
+	}
+	public double area(double radius,boolean iscircle) {
+		double b= Math.PI*radius*radius;
+		return b;
+		
+	}
+	public static void main(String[] args) {
+		Areas a=new Areas();
+		System.out.println("area of rectangle" +a.area(4,5);
+		System.out.println("area of square" +a.area(45.66));
+			
+		
+	
+
+}
+
+=============================================method overloading==========================================
+package com.polymorphism;
+
+public class Overloading {
+	public void addition(int a,int b) {
+		System.out.println("sum of a,b: "+(a+b));
+	}
+	public void addition(int a,int b,int c) {
+		System.out.println("sum of a,b,c: "+(a+b+c));
+	}
+	public void addition(float a,int b) {
+		System.out.println("sum of a,b: "+(a+b));
+	}
+	public void addition(int a ,float b ) {
+		System.out.println("sum of a,b: "+(a+b));
+	}
+	public void addition(float a,float b) {
+		System.out.println("sum of a,b: "+(a+b));
+	}
+	public static void main(String[] args) {
+		Overloading o=new Overloading();
+		o.addition(10,20);
+		o.addition(10,20,30);
+		o.addition('a','b');
+		o.addition(123.89f,123.72f);
+		o.addition(30,45.5f);
+		o.addition(45.56f, 'a');
+		
+	}
+
+}
+==================================================================================================================================================
+package com.polymorphism;
+
+public class ProductSearch {
+	public void search(int pid)
+	{
+		System.out.println("product search by id"+pid);
+	}
+	public void search(String pname)
+	{
+		System.out.println("product search by name"+pname);
+	}
+	public void search(String pname,int pid)
+	{
+		System.out.println("product search by name"+pid+"and"+pname);
+	}
+	public static void main(String[] args) {
+		ProductSearch p=new ProductSearch();
+		p.search(20);
+		p.search("mobile",30);
+		p.search("laptop");
+	}
+
+}
+==============================================================================================================================================================

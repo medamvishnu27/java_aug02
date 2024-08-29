@@ -1,0 +1,403 @@
+
+
+//Write a program to copy the elements of one array into another array
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int [] a=new int[n];
+		int [] b=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+		for(int i=0;i<n;i++){
+		    b[i]=a[i];
+		}
+		for(int i=0;i<n;i++)
+		{
+		    System.out.print( b[i]+" ");
+		}
+	}
+}
+//Write a program to array elements to print cubic values
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int [] a=new int[n];
+		int [] b=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+		
+		for(int i=0;i<n;i++)
+		{
+		    System.out.print( a[i]*a[i]*a[i]+" ");
+		}
+	}
+}
+
+//Write a program to array elements print all Even number
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int [] a=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+		
+		for(int i=0;i<n;i++)
+		{
+		    if(a[i]%2==0){
+		        System.out.print( a[i]+" ");
+		    }
+		}
+	}
+}
+//Write a program to find the maximum and minimum element in an array
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int [] a=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+		int min=Integer.MAX_VALUE;
+		int max=Integer.MIN_VALUE;
+		
+		for(int i=0;i<n;i++)
+		{
+		   if(a[i]>max){
+		       max=a[i];
+		       
+		   }
+		   if(a[i]<min){
+		       min=a[i];
+		   }
+		}
+		System.out.println("max is: " +max+" min is: "+min);
+	}
+}
+//Write a program to array elements print all Odd number
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int [] a=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+	
+		
+		for(int i=0;i<n;i++)
+		{
+		   if((a[i]%2)!=0)
+		   {
+		       System.out.println("odd number: " +a[i]);
+		       
+		   }
+		}
+		
+	}
+}
+
+//
+
+
+//Write a program to read n number of values in an array and display in reverse order
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int [] a=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+	
+		
+		for(int i=n-1;i>=0;i--)
+		{
+		    System.out.print(a[i]+" ");
+		  
+		}
+		
+	}
+}
+//Write a program to search an element in an array
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		Boolean b=false;
+		int [] a=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+	    int s=sc.nextInt();
+		
+		for(int i=0;i<n;i++)
+		{
+		    if(a[i]==s){
+		        b=true;
+		        break;
+		        
+		    }
+		  
+		}
+		if(b==true){
+		    System.out.println("Element is found");
+		}
+		else
+		{
+		    System.out.println("Element is not found");
+		    
+		}
+		
+	}
+}
+
+//Write a program to array elements print all Negative number
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int [] a=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+		System.out.print("negative numbers: ");
+		for(int i=0;i<n;i++){
+		    if(a[i]<0){
+		        
+		        System.out.print(a[i]+" ");
+		    }
+		}
+	}
+}
+
+//Write a program to array elements print all Positive number
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int [] a=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+		System.out.print("negative numbers: ");
+		for(int i=0;i<n;i++){
+		    if(a[i]>0){
+		        
+		        System.out.print(a[i]+" ");
+		    }
+		}
+	}
+}
+
+//Write a program in to find the sum of all elements of the array
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int [] a=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+		int sum=0;
+		for(int i=0;i<n;i++)
+		{
+		    sum+=a[i];
+		}
+		System.out.print(sum);
+	}
+}
+//Write a program to Print Unique Elements in Array
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int [] a=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    a[i]=sc.nextInt();
+		}
+		int count=0;
+		for(int i=0;i<n;i++){
+		    for(int j=0;j<n;j++){
+		        if(a[i]==a[j]){
+		            count++;
+		            
+		        }
+		       
+		        }
+		         if(count==1){
+		            System.out.print(a[i]+" ");
+		         
+		    }
+		    count=0;
+		}
+	}
+}
+////Write a program to array elements to print sum of Cubic Values
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int []a=new int[n];
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		}
+		int sum=0;
+		for(int i=0;i<n;i++)
+		{
+		    sum+=a[i]*a[i]*a[i];
+		}
+		System.out.println("sum  " +sum);
+	}
+}
+//
+//Write a program to find the second smallest element in an array
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+			int r;
+		int n=sc.nextInt();
+		int []a=new int[n];
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		}
+		Arrays.sort(a);
+		int i=1;
+	
+		int b=a[0];
+		while(i<n){
+		    if(a[i]!=b){
+		        System.out.print(a[i]);
+		        break;
+		        
+		    }
+		    else
+		    {
+		       
+		       
+		          i++;
+		    }
+		}
+	
+	}
+}
+//Write a program to Sort Numeric Array In Ascending Order
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+			int r;
+		int n=sc.nextInt();
+		int []a=new int[n];
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		}
+		Arrays.sort(a);
+	
+		for(int i=0;i<n;i++){
+		    System.out.print(a[i]+" ");
+		}
+	
+	}
+
+}
+
+//Write a program to Sort Numeric Array In Descending Order
+
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+			int r;
+		int n=sc.nextInt();
+		int []a=new int[n];
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		}
+		Arrays.sort(a);
+	
+		for(int i=n-1;i>=0;i--){
+		    System.out.print(a[i]+" ");
+		}
+	
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

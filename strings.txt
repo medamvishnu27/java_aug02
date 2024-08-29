@@ -1,0 +1,315 @@
+
+//Write a program to get the character at the given index within the String
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		int n=s.length();
+		int r=sc.nextInt();
+		    System.out.println("character at index: " +s.charAt(r));
+		
+		
+	}
+}
+
+//Write a program to check if the letter is present in the word
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		int n=s.length();
+		boolean b=false;
+		char c=sc.next().charAt(0);
+		for(int i=0;i<n;i++){
+		    if(s.charAt(i)==c){
+		        b=true;
+		        break;
+		        
+		    }
+		}
+		if(b){
+		    System.out.println("character is found");
+		}
+		else
+		{
+		    System.out.println("Character is not found");
+		}
+		
+		
+	}
+}
+//Write a program to check whether two String objects contain the same data
+
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		String s1=sc.nextLine();
+		
+	
+		        
+		    
+		
+		if(s.equals(s1)){
+		    System.out.println("Two strings containing the same data");
+		}
+		else
+		{
+		    System.out.println("Two strings containing different data");
+		}
+		
+		
+	}
+}
+
+//Write a program to check whether a given string starts with the contents of another string
+
+import java.util.Scanner;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String s1=sc.nextLine();
+	    String s2=sc.nextLine();
+	    int n=s1.length();
+	    String s4="";
+	    String s3="";
+	    int n1=s2.length();
+	    int i=0,j=0;
+	    while(i<n && j<n1){
+	        if(s1.charAt(i)==' ' || s2.charAt(i)==' ')
+	        {
+	            break;
+	        }
+	        else
+	        {
+	            s3+=s1.charAt(i);
+	            s4+=s2.charAt(j);
+	            
+	        }
+	        i++;
+	        j++;
+	    }
+	    if(s4.equals(s3)){
+	        System.out.print("starts with same word");
+	    }
+	    else{
+	        System.out.print("starts with different words");
+	    }
+		
+	}
+}
+
+//Write a program to compare two strings lexicographically , ignoring case differences
+
+import java.util.Scanner;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s1=sc.nextLine();
+		String s2=sc.nextLine();
+		String s3=s1.toLowerCase();
+		String s4=s2.toLowerCase();
+		if(s3.equals(s4)){
+		    System.out.println("two strings are equal");
+		}
+		else{
+		    int i=0,j=0;
+		    while(i<s3.length() && j<s4.length())
+		    {
+		        if((s3.charAt(i)-s4.charAt(j))>0){
+		            System.out.println("s4 is less than s3");
+		            break;
+		            
+		        }
+		        else if((s4.charAt(i)-s3.charAt(j))>0){
+		            System.out.println("s3 is less than s4");
+		            break;
+		        }
+		        else
+		        {
+		            i++;
+		            j++;
+		        }
+		    }
+		}
+	}
+}
+
+import java.util.Scanner;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String s1="";
+	    String s=sc.nextLine();
+	     Stack<Character> st = new Stack<>();
+	    for(int i=0;i<s.length();i++)
+	    {
+	        if(s.charAt(i)!=' ')
+	        {
+	            st.push(s.charAt(i));
+	        }
+	        else if(s.charAt(i)==' ')
+	        {
+	            while(!st.empty()){
+	                s1+=st.peek();
+	                st.pop();
+	                
+	            }
+	            s1+=" ";
+	        }
+	        
+	    }
+	    
+	   while(!st.empty()){
+	       s1+=st.peek();
+	       st.pop();
+	     }
+	    System.out.println(s1);
+		
+	}
+}
+
+
+import java.util.Scanner;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String s1="";
+	    String s=sc.nextLine();
+	     Stack<Character> st = new Stack<>();
+	    for(int i=s.length()-1;i>=0;i--)
+	    {
+	        if(s.charAt(i)!=' ')
+	        {
+	            st.push(s.charAt(i));
+	        }
+	        else if(s.charAt(i)==' ')
+	        {
+	            while(!st.empty()){
+	                s1+=st.peek();
+	                st.pop();
+	                
+	            }
+	            s1+=" ";
+	        }
+	        
+	    }
+	    
+	   while(!st.empty()){
+	       s1+=st.peek();
+	       st.pop();
+	   }
+	    System.out.println(s1);
+		
+	}
+}
+
+
+
+import java.util.Scanner;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String s1="";
+	    String s=sc.nextLine();
+	    String search=sc.next();
+	    boolean b=false;
+	     Queue<Character> st = new LinkedList<>();
+	    for(int i=0;i<s.length();i++)
+	    {
+	        if(s.charAt(i)!=' ')
+	        {
+	            st.add(s.charAt(i));
+	        }
+	        else if(s.charAt(i)==' ')
+	        {
+	            while(!st.isEmpty()){
+	                s1+=st.peek();
+	                st.poll();
+	                
+	            }
+	            if(s1==search)
+	            {
+	                b=true;
+	            }
+	             System.out.println(s1);
+	            s1="";
+	        }
+	        
+	    }
+	    
+	   while(!st.isEmpty()){
+	       s1+=st.peek();
+	       st.poll();
+	      
+	   }
+	    System.out.println(s1);
+	   boolean a=false;
+	   if(s1.equals(search)){
+	       a=true;
+	       
+	   }
+	    if(a | b){
+	        System.out.print("found");
+	    }
+	    else
+	    {
+	        System.out.print("not found");
+	        
+	    }
+		
+	}
+}
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String s1=sc.next();
+	    String s2=sc.next();
+	    s1+=s2;
+	   
+	    
+	    s2=s1.substring(0,s1.length()-s2.length());
+	    s1=s1.substring(s1.length()-s2.length()+1,s1.length());
+	    System.out.println(s1);
+	    System.out.println(s2);
+	    
+	    
+	    
+	
+	}
+}
+
+
+
+

@@ -1,0 +1,215 @@
+package com.inheritance;
+class superdemo{
+	int salary=40000;
+	public void getSalary(int salary) {
+		salary=40000;
+		System.out.println("my salary"+salary);
+		
+		
+		
+		
+	}
+	
+}
+
+
+public class child extends superdemo {
+	int salary=30000;
+	public void getSalary(int salary) {
+		salary=40000;
+		System.out.println("my salary"+salary);
+		System.out.println("object is"+this);
+		System.out.println("my global salary"+this.salary);
+		super.getSalary(70000);
+		System.out.println("my parent salary"+super.salary);
+	}
+	
+	public static void main(String[] args) {
+		child ch=new child();
+		ch.getSalary(20000);	
+	}
+
+}
+=======================================================================================================================================
+package com.cal;
+
+import java.util.Scanner;
+
+public class calculator {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the student name");
+		String name=sc.next();
+		System.out.println("enter the student age");
+		int age=sc.nextInt();
+		System.out.println("enter the Maths grade");
+		double grade1=sc.nextDouble();
+		System.out.println("enter the science grade");
+		double grade2=sc.nextDouble();
+		System.out.println("enter the English grade");
+		double grade3=sc.nextDouble();
+		double avg=(grade1+grade2+grade3)/3;
+		if(avg>60) {
+			System.out.println("firstclass");
+			System.out.println("student name"+name);
+			System.out.println("student age"+age);
+			System.out.println("student avg"+avg);
+		}
+		else
+		{
+			System.out.println("secondrclass");
+			System.out.println("student name"+name);
+			System.out.println("student age"+age);
+			System.out.println("student avg"+avg);
+			
+		}
+				
+		
+		
+		
+		
+	}
+
+}
+=================================================================================================================================
+package com.demo;
+
+public class Demo {
+	
+	
+	public void addition(int a ,int b) {
+		System.out.println("addition"+(a+b));
+	}
+	public static int subtraction(int a,int b) {
+		
+		return (a-b);
+	}
+	public int multi(int a,int b)
+	{
+		
+		return a*b;
+	}
+	public void div(int a,int b) {
+		System.out.println(+a/b);
+	}
+	public static void main(String[] args) {
+		Demo obj=new Demo();
+		obj.addition(20, 30);
+		obj.div(200, 30);
+		System.out.println(obj.multi(20, 30));
+		System.out.println(Demo.subtraction(20,30));
+		
+		
+	}
+
+}
+=================================================================================================================================
+package com.eco;
+class product{
+	int productid;
+	String productName;
+	int price;
+	public product(int productid,String productName,int price) {
+		this.productid=productid;
+		this.productName=productName;
+		this.price=price;
+		
+		
+	}
+	public void displayinfo() {
+		System.out.println("model" +productid);
+		System.out.println("year" +productName);
+		System.out.println("made" +price);
+	}
+}
+class electronics extends product{
+	int period;
+	public electronics(int productid,String productName,int price,int period) {
+		super(productid,productName,price);
+		this.period=period;
+		
+	}
+	public void displayinfo() {
+		super.displayinfo();
+		System.out.println("period" +period);
+	}
+	}
+
+
+
+public class clothing extends product {
+	int size;
+	public clothing(int productid,String productName,int price,int size) {
+		super(productid,productName,price);
+		this.size=size;
+	}
+	public void displayinfo() {
+		super.displayinfo();
+		System.out.println("size" +size);
+	}
+	public static void main(String[] args) {
+		clothing c=new clothing(124,"sa",200,20);
+		c.displayinfo();
+		electronics e=new electronics(1234,"rh",2000,5);
+		e.displayinfo();
+	}
+
+}
+===================================================================================================
+package com.employee;
+class Parent{
+	 protected void m2() {
+		System.out.println("m2 method");
+	}
+}
+
+public class Employee extends Parent {
+	 private void m1() {
+		System.out.println("m1 method");
+	}
+	public static void main(String[] args) {
+		Employee e=new Employee();
+		e.m1();
+		e.m2();
+//		Parent p=new Parent();
+//		p.m2();
+	}
+
+}
+==============================================================================================================
+package com.example;
+class parent{
+	int a=50;
+	public parent(int a) {
+		this.a=a;
+	}
+}
+
+public class child extends parent{
+	public child(int a) {
+		super(a);
+	}
+  public void displayinfo() {
+	  System.out.println("gg" +a);
+	  
+  }
+  public static void main(String[] args) {
+	child c=new child(10);
+	c.displayinfo();
+}
+
+}
+============================================================================================
+package com.hacker;
+ 
+import com.employee.*;
+public class Hacker extends Employee {
+	public static void main(String[] args) {
+//		Employee e=new Employee();
+//		e.m1();
+		Hacker h=new Hacker();
+		h.m1();
+		
+	}
+
+}
